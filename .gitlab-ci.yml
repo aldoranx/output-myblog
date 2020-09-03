@@ -2,5 +2,6 @@
 demo_job_1: 
   script: 
     - "echo Hello World"
+    - "pelican content"
   tags: 
     - ci
