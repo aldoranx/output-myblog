@@ -1,6 +1,6 @@
---- 
-demo_job_1: 
+---
+b_1: 
   script: 
     - "echo Hello World"
   tags: 
-    - "ci,ssh"
+    - ci
