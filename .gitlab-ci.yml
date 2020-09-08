@@ -10,7 +10,7 @@ build:
   tags:
     - ci
 
-  when: manual
+  
 
 test:
   stage: test
@@ -21,4 +21,3 @@ test:
   tags:
     - ci
    
-  when: manual
