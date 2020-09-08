@@ -1,7 +1,7 @@
 stages:
   - build
   - test
-
+  
 build:
   stage: build
   script:
@@ -13,8 +13,7 @@ test:
     - rm -rf output
     - pelican content
     - cd output; python -m pelican.server
-
-   tags:
+  tags:
     - ci
 
   when: manual
