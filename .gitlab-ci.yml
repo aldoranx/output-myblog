@@ -1,26 +1,16 @@
----
-demo_job_1:
-  stage:
-    - test
-    - build
+stages:
+  - build
+  - test
 
-  destroy:
-    - stage: test  
-    - script:
-         - echo Hello World
-      tags:
-         - ci
+build:
+  stage: build
+  script:
+    - echo Hello World
 
-  build:
-    - stage: build  
-    - script:
-        # we use pelican command to generate an article and transform the markdown in output
-          - rm -rf output
-          - pelican content
-          - cd output; python -m pelican.server
-        # Build job manually
-      when: manual
-        
-      tags:
-         - ci
-    
+test:
+  stage: test
+  script:
+    - rm -rf output
+    - pelican content
+    - cd output; python -m pelican.server
+  when: manual
