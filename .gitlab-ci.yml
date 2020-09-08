@@ -5,5 +5,15 @@ build:
   stage: build
   tags: 
     - ci
+
+test:
+  script:
+    - rm -rf output
+    - pelican content
+    - cd output; python -m pelican.server
+  stage: test
+  tags:
+    - ci
 stages: 
   - build
+  - test
