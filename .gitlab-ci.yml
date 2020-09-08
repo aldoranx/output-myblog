@@ -1,9 +1,6 @@
----
-demo_job_1:
-  script:
-    - rm -rf output
-    - pelican content
-    - cd output; python -m pelican.server
-  tags:
+--- 
+demo_job_1: 
+  script: 
+    - "echo Hello World"
+  tags: 
     - ci
-  
