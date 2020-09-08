@@ -9,4 +9,6 @@ build:
 
   tags:
     - ci
+    - shell
+    - ssh
    
