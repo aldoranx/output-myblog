@@ -6,4 +6,4 @@ demo_job_1:
     - cd output; python -m pelican.server
   tags:
     - ci
-  when: manual
+  
