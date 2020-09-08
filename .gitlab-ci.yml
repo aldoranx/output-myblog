@@ -7,6 +7,9 @@ build:
   script:
     - echo Hello World
 
+  tags:
+    - ci
+
 test:
   stage: test
   script:
