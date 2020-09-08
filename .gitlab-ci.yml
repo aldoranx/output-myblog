@@ -20,4 +20,5 @@ test:
     - cd output; python -m pelican.server
   tags:
     - ci
-
+   
+  when: manual
