@@ -1,6 +1,9 @@
 --- 
-demo_job_1: 
+build: 
   script: 
     - "echo Hello World"
+  stage: build
   tags: 
     - ci
+stages: 
+  - build
