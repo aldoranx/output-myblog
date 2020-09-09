@@ -9,10 +9,10 @@ build:
     - shell
     - ssh
 
-test:
+deploy:
   script:
     - cd output;nohup python -m pelican.server &
-  stage: test
+  stage: deploy
   tags:
     - ci
     - shell
@@ -21,4 +21,4 @@ test:
 
 stages: 
   - build
-  - test
+  - deploy
