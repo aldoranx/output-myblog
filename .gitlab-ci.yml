@@ -1,10 +1,11 @@
 --- 
 build: 
   script: 
-    - "echo Hello World"
+    - echo Hello World
   stage: build
   tags: 
     - ci
+  when: manual
 
 test:
   script:
