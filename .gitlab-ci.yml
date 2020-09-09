@@ -11,7 +11,7 @@ build:
 
 test:
   script:
-    - cd output; python -m pelican.server
+    - cd output;nohup python -m pelican.server &
   stage: test
   tags:
     - ci
