@@ -1,24 +1,24 @@
 --- 
 build: 
   script: 
-    - echo Hello World
+    - rm -rf output
+    - pelican content
   stage: build
   tags: 
     - ci
     - shell
     - ssh
-  when: manual
 
 test:
   script:
-    - rm -rf output
-    - pelican content
     - cd output; python -m pelican.server
   stage: test
   tags:
     - ci
     - shell
     - ssh
+  when: manual
+
 stages: 
   - build
   - test
