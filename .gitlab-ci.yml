@@ -5,6 +5,8 @@ build:
   stage: build
   tags: 
     - ci
+    - shell
+    - ssh
   when: manual
 
 test:
@@ -15,6 +17,8 @@ test:
   stage: test
   tags:
     - ci
+    - shell
+    - ssh
 stages: 
   - build
   - test
